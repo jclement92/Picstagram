@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='walkthrough.gif' title='Video Walkthrough' height='650px' alt='Video Walkthrough' />
-<img src='walkthrough2.gif' title='Persistence Video Walkthrough' height='650px' alt='Persistence Video Walkthrough' />
+<img src='walkthrough-2.gif' title='Persistence Video Walkthrough' height='650px' alt='Persistence Video Walkthrough' />
 <img src='picstagram-post.png' title='Picstagram Post' alt='Picstagram Post' />
 
 ## Notes
