@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Picstagram</string>
+
+    <!-- Activity strings -->
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+
+    <!-- activity_login.xml -->
+    <string name="login">Log in</string>
+    <string name="signup">Sign Up</string>
+
+    <!-- activity_sign_up.xml -->
+    <string name="signup_signupLabel">Sign up to experience&#8230;</string>
+    <string name="signup_emailHint">Email address</string>
+    <string name="signup_createaccountText">Create account</string>
+
+    <!-- activity_main.xml -->
+    <string name="caption">Write a caption…</string>
+    <string name="submit">Submit</string>
+    <string name="log_out">Log Out</string>
+    <string name="photo">photo</string>
+
+    <!-- menu_main.xml -->
+    <string name="add_photo">Add Photo</string>
+    <string name="activity">Activity</string>
+    <string name="direct">Direct Messages</string>
+</resources>
