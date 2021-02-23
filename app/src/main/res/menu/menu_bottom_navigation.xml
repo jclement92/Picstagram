@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/bottom_nav_icon_home_selector"
+        android:title="@string/home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_compose"
+        android:icon="@drawable/bottom_nav_icon_new_post_selector"
+        android:title="@string/compose"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/bottom_nav_icon_user_selector"
+        android:title="@string/profile"
+        app:showAsAction="ifRoom" />
+
+</menu>

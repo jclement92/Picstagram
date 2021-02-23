@@ -42,10 +42,10 @@ public class LoginActivity extends AppCompatActivity {
             loginUser(username, password);
         });
 
-        btnSignup.setOnClickListener(v -> goSignupActivity());
+        btnSignup.setOnClickListener(v -> goSignUpActivity());
     }
 
-    private void goSignupActivity() {
+    private void goSignUpActivity() {
         Intent i = new Intent(this, SignUpActivity.class);
         startActivity(i);
     }

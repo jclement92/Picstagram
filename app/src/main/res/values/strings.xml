@@ -6,7 +6,7 @@
     <string name="password_hint">Password</string>
 
     <!-- activity_login.xml -->
-    <string name="login">Log in</string>
+    <string name="login">Log In</string>
     <string name="signup">Sign Up</string>
 
     <!-- activity_sign_up.xml -->
@@ -17,11 +17,27 @@
     <!-- activity_main.xml -->
     <string name="caption">Write a caption…</string>
     <string name="submit">Submit</string>
-    <string name="log_out">Log Out</string>
+    <string name="log_out">Log out</string>
     <string name="photo">photo</string>
 
     <!-- menu_main.xml -->
     <string name="add_photo">Add Photo</string>
     <string name="activity">Activity</string>
     <string name="direct">Direct Messages</string>
+
+    <!--  fragment_compose.xml  -->
+    <string name="composeFragment_ivDescription">Image preview</string>
+    <string name="composeFragment_descriptionHint">Description</string>
+    <string name="composeFragment_takePictureText">Take picture</string>
+    <string name="composeFragment_submitText">Submit</string>
+
+    <!-- item_post.xml -->
+    <string name="postsAdapter_username">test</string>
+    <string name="postsAdapter_ivDescription">Image</string>
+    <string name="postsAdapter_caption">Hello, world!</string>
+
+    <!-- menu_bottom_navigation.xml -->
+    <string name="home">Home</string>
+    <string name="compose">Compose</string>
+    <string name="profile">Profile</string>
 </resources>
