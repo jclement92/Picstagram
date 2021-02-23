@@ -41,18 +41,20 @@
 
     <Button
         android:id="@+id/btnLogin"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#458EFF"
+        android:textAllCaps="false"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_weight="1"
         android:text="@string/login" />
 
     <Button
         android:id="@+id/btnSignup"
-        style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#458EFF"
+        android:textAllCaps="false"
         android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
         android:layout_weight="1"
         android:text="@string/signup" />

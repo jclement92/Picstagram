@@ -8,4 +8,11 @@
 
     <dimen name="ivHeight">200dp</dimen>
 
+    <dimen name="activity_textSize">16sp</dimen>
+
+    <dimen name="fragment_ivHeight">200dp</dimen>
+    <dimen name="fragment_postPadding">8dp</dimen>
+
+    <dimen name="post_layoutMargin">8dp</dimen>
+    <dimen name="post_ivHeight">300dp</dimen>
 </resources>
