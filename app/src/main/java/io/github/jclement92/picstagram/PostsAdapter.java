@@ -1,6 +1,7 @@
 package io.github.jclement92.picstagram;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,8 +68,12 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
         public void bind(Post post) {
             // Bind the post data into the view elements
-            tvDescription.setText(post.getDescription());
             tvUsername.setText(post.getUser().getUsername());
+            tvDescription.setText(Html.fromHtml("<strong><span style=\"color:black\">"+post.getUser().getUsername()+"</span></strong>"));
+            tvDescription.append(" " + post.getDescription());
+
+//            tvDescription.setText(post.getDescription());
+
             ParseFile image = post.getImage();
 
             if (image != null) {

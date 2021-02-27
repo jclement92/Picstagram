@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/post_layoutMargin"
+    android:paddingVertical="8dp"
     android:orientation="vertical">
 
     <TextView
@@ -11,8 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/postsAdapter_username"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:drawablePadding="5dp"
+        android:paddingBottom="4dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        app:drawableEndCompat="@drawable/ufi_more"
+        app:drawableStartCompat="@drawable/ic_baseline_person_24" />
 
     <ImageView
         android:id="@+id/ivImage"
@@ -22,10 +32,70 @@
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ufi_heart_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivComment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="Like" />
+
+        <ImageView
+            android:id="@+id/ivComment"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ufi_comment"
+            app:layout_constraintStart_toEndOf="@id/ivLike"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivShare"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="Comment" />
+
+        <ImageView
+            android:id="@+id/ivShare"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/direct"
+            app:layout_constraintStart_toEndOf="@id/ivComment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="14dp"
+            android:contentDescription="Share" />
+
+        <ImageView
+            android:id="@+id/ivSave"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ufi_save_icon"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="Save" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginBottom="@dimen/post_layoutMargin"
         android:text="@string/postsAdapter_caption" />
 
