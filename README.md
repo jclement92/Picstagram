@@ -22,9 +22,9 @@ The following **optional** features are implemented:
 - [X] Show the username and creation time for each post.
 - [ ] User can tap a post to view post details, including timestamp and caption.
 - [ ] User Profiles
-      - [ ] Allow the logged in user to add a profile photo
-      - [ ] Display the profile photo with each post
-      - [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts 
+  - [ ] Allow the logged in user to add a profile photo
+  - [ ] Display the profile photo with each post
+- [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts 
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [ ] User can like a post and see number of likes for each post in the post details screen.
 
