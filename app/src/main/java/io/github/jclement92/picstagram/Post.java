@@ -36,4 +36,8 @@ public class Post extends ParseObject {
     public void setUser(ParseUser user) {
         put(KEY_USER, user);
     }
+
+    public String getFormattedTimestamp(String createdAt) {
+        return TimeFormatter.getTimeDifference(createdAt);
+    }
 }

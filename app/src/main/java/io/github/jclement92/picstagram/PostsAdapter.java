@@ -2,6 +2,7 @@ package io.github.jclement92.picstagram;
 
 import android.content.Context;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,8 @@ import com.parse.ParseFile;
 import java.util.List;
 
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
+
+    private static final String TAG = "PostsAdapter";
 
     private Context context;
     private List<Post> posts;
@@ -58,21 +61,24 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         private TextView tvUsername;
         private ImageView ivImage;
         private TextView tvDescription;
+        private TextView tvCreatedKey;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvUsername = itemView.findViewById(R.id.tvUsername);
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvCreatedKey = itemView.findViewById(R.id.tvCreatedKey);
         }
 
         public void bind(Post post) {
             // Bind the post data into the view elements
             tvUsername.setText(post.getUser().getUsername());
+
             tvDescription.setText(Html.fromHtml("<strong><span style=\"color:black\">"+post.getUser().getUsername()+"</span></strong>"));
             tvDescription.append(" " + post.getDescription());
 
-//            tvDescription.setText(post.getDescription());
+            tvCreatedKey.setText(post.getFormattedTimestamp(post.getCreatedAt().toString()));
 
             ParseFile image = post.getImage();
 
