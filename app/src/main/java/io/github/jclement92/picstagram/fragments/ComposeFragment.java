@@ -83,7 +83,6 @@ public class ComposeFragment extends Fragment {
         btnSubmit = view.findViewById(R.id.btnSubmit);
         pbLoading = view.findViewById(R.id.pbLoading);
 
-//        queryPosts();
         btnSubmit.setOnClickListener(v -> {
             String description = etCaption.getText().toString();
 
