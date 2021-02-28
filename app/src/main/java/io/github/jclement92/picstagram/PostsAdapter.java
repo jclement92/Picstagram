@@ -2,7 +2,6 @@ package io.github.jclement92.picstagram;
 
 import android.content.Context;
 import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +19,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     private static final String TAG = "PostsAdapter";
 
-    private Context context;
-    private List<Post> posts;
+    private final Context context;
+    private final List<Post> posts;
 
     public PostsAdapter(Context context, List<Post> posts) {
         this.context = context;
@@ -58,10 +57,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView tvUsername;
-        private ImageView ivImage;
-        private TextView tvDescription;
-        private TextView tvCreatedKey;
+        private final TextView tvUsername;
+        private final ImageView ivImage;
+        private final TextView tvDescription;
+        private final TextView tvCreatedKey;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

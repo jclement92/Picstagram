@@ -14,12 +14,13 @@
 
     <application
         android:name="io.github.jclement92.picstagram.ParseApplication"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Picstagram">
+        android:theme="@style/Theme.Picstagram"
+        android:fullBackupContent="false" >
         <activity
             android:name="io.github.jclement92.picstagram.SignUpActivity"
             android:windowSoftInputMode="adjustResize" />
