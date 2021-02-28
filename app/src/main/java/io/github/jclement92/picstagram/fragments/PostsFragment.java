@@ -33,15 +33,14 @@ public class PostsFragment extends Fragment {
 
     private static final String TAG = "PostsFragment";
     private RecyclerView rvPosts;
-    PostsAdapter adapter;
-    List<Post> allPosts;
+    private PostsAdapter adapter;
+    private List<Post> allPosts;
 
     private SwipeRefreshLayout swipeRefreshLayout;
 
     public PostsFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,7 +55,7 @@ public class PostsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Toolbar toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         rvPosts = view.findViewById(R.id.rvPosts);
         swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);

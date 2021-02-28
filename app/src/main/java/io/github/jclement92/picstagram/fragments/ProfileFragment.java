@@ -33,17 +33,14 @@ public class ProfileFragment extends PostsFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-
         Toolbar toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         toolbar.setTitle(currentUser.getUsername());
 
         btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> logout());
-
     }
 
     private void logout() {
