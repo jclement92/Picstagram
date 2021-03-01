@@ -55,7 +55,7 @@ The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 
-### Video Walkthrough
+## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
@@ -64,16 +64,16 @@ Here's a walkthrough of implemented user stories:
 <img src='walkthrough-3.gif' title='Updated Video Walkthrough' height='650px' alt='Updated Video Walkthrough' />
 <img src='picstagram-post.png' title='Picstagram Post' alt='Picstagram Post' />
 
-### Notes
+## Notes
 
 Describe any challenges encountered while building the app.
 
-### Open-source libraries used
+## Open-source libraries used
 
 - [Parse SDK](https://github.com/parse-community/Parse-SDK-Android) - The Android SDK for the Parse Platform
 - [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
-### License
+## License
 
     Copyright 2021 Christopher Clement
 
