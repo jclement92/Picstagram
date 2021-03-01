@@ -22,8 +22,8 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.jclement92.picstagram.Post;
-import io.github.jclement92.picstagram.PostsAdapter;
+import io.github.jclement92.picstagram.model.Post;
+import io.github.jclement92.picstagram.adapter.PostsAdapter;
 import io.github.jclement92.picstagram.R;
 
 /**
@@ -33,8 +33,8 @@ public class PostsFragment extends Fragment {
 
     private static final String TAG = "PostsFragment";
     private RecyclerView rvPosts;
-    private PostsAdapter adapter;
-    private List<Post> allPosts;
+    PostsAdapter adapter;
+    List<Post> allPosts;
 
     private SwipeRefreshLayout swipeRefreshLayout;
 

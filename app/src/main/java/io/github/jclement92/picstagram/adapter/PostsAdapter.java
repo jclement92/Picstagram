@@ -1,7 +1,11 @@
-package io.github.jclement92.picstagram;
+package io.github.jclement92.picstagram.adapter;
 
 import android.content.Context;
-import android.text.Html;
+import android.graphics.Color;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +18,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.parse.ParseFile;
 
 import java.util.List;
+
+import io.github.jclement92.picstagram.GlideApp;
+import io.github.jclement92.picstagram.R;
+import io.github.jclement92.picstagram.model.Post;
+
+import static android.graphics.Typeface.BOLD;
 
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
 
@@ -74,7 +84,21 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             // Bind the post data into the view elements
             tvUsername.setText(post.getUser().getUsername());
 
-            tvDescription.setText(Html.fromHtml("<strong><span style=\"color:black\">"+post.getUser().getUsername()+"</span></strong>"));
+            SpannableString spannableString = new SpannableString(post.getUser().getUsername());
+
+            spannableString.setSpan(
+                    new ForegroundColorSpan(Color.BLACK),
+                    0,
+                    spannableString.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+            spannableString.setSpan(
+                    new StyleSpan(BOLD),
+                    0,
+                    spannableString.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+            tvDescription.setText(spannableString);
             tvDescription.append(" " + post.getDescription());
 
             tvCreatedKey.setText(post.getFormattedTimestamp(post.getCreatedAt().toString()));

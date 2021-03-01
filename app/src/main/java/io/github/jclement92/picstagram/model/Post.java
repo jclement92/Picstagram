@@ -1,9 +1,11 @@
-package io.github.jclement92.picstagram;
+package io.github.jclement92.picstagram.model;
 
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
+
+import io.github.jclement92.picstagram.TimeFormatter;
 
 @ParseClassName("Post")
 public class Post extends ParseObject {

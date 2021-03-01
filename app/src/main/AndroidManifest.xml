@@ -22,7 +22,7 @@
         android:theme="@style/Theme.Picstagram"
         android:fullBackupContent="false" >
         <activity
-            android:name="io.github.jclement92.picstagram.SignUpActivity"
+            android:name="io.github.jclement92.picstagram.activities.SignUpActivity"
             android:windowSoftInputMode="adjustResize" />
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -34,14 +34,14 @@
                 android:resource="@xml/fileprovider" />
         </provider>
 
-        <activity android:name="io.github.jclement92.picstagram.LoginActivity">
+        <activity android:name="io.github.jclement92.picstagram.activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="io.github.jclement92.picstagram.MainActivity" />
+        <activity android:name="io.github.jclement92.picstagram.activities.MainActivity" />
     </application>
 
 </manifest>

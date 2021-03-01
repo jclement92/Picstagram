@@ -1,4 +1,4 @@
-package io.github.jclement92.picstagram;
+package io.github.jclement92.picstagram.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.ParseUser;
+
+import io.github.jclement92.picstagram.R;
 
 public class LoginActivity extends AppCompatActivity {
 

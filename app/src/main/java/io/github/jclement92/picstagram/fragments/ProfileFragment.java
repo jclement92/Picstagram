@@ -16,8 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-import io.github.jclement92.picstagram.LoginActivity;
-import io.github.jclement92.picstagram.Post;
+import io.github.jclement92.picstagram.activities.LoginActivity;
+import io.github.jclement92.picstagram.model.Post;
 import io.github.jclement92.picstagram.R;
 
 public class ProfileFragment extends PostsFragment {

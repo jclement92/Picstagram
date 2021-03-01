@@ -1,4 +1,4 @@
-package io.github.jclement92.picstagram;
+package io.github.jclement92.picstagram.activities;
 
 import android.os.Bundle;
 
@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import io.github.jclement92.picstagram.R;
 import io.github.jclement92.picstagram.fragments.ComposeFragment;
 import io.github.jclement92.picstagram.fragments.PostsFragment;
 import io.github.jclement92.picstagram.fragments.ProfileFragment;
