@@ -62,6 +62,7 @@ Here's a walkthrough of implemented user stories:
 <img src='walkthrough.gif' title='Video Walkthrough' height='650px' alt='Video Walkthrough' />
 <img src='walkthrough-2.gif' title='Persistence Video Walkthrough' height='650px' alt='Persistence Video Walkthrough' />
 <img src='walkthrough-3.gif' title='Updated Video Walkthrough' height='650px' alt='Updated Video Walkthrough' />
+<img src='walkthrough-4.gif' title='Updated Video Walkthrough' height='650px' alt='Updated Video Walkthrough' />
 
 ## Photos
 <img src='picstagram-post.png' title='Picstagram Post' alt='Picstagram Post' />
