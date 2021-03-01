@@ -16,8 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
-import io.github.jclement92.picstagram.LoginActivity;
-import io.github.jclement92.picstagram.Post;
+import io.github.jclement92.picstagram.activities.LoginActivity;
+import io.github.jclement92.picstagram.model.Post;
 import io.github.jclement92.picstagram.R;
 
 public class ProfileFragment extends PostsFragment {
@@ -33,17 +33,14 @@ public class ProfileFragment extends PostsFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-
         Toolbar toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         ParseUser currentUser = ParseUser.getCurrentUser();
         toolbar.setTitle(currentUser.getUsername());
 
         btnLogout = view.findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(v -> logout());
-
     }
 
     private void logout() {

@@ -5,6 +5,8 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
+import io.github.jclement92.picstagram.model.Post;
+
 public class ParseApplication extends Application {
 
     // Initializes Parse SDK as soon as the application is created

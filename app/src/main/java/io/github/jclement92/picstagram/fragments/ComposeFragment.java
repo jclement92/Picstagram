@@ -38,7 +38,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-import io.github.jclement92.picstagram.Post;
+import io.github.jclement92.picstagram.model.Post;
 import io.github.jclement92.picstagram.R;
 
 import static android.app.Activity.RESULT_OK;
@@ -83,7 +83,6 @@ public class ComposeFragment extends Fragment {
         btnSubmit = view.findViewById(R.id.btnSubmit);
         pbLoading = view.findViewById(R.id.pbLoading);
 
-//        queryPosts();
         btnSubmit.setOnClickListener(v -> {
             String description = etCaption.getText().toString();
 

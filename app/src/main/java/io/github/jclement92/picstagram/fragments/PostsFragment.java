@@ -22,8 +22,8 @@ import com.parse.ParseQuery;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.github.jclement92.picstagram.Post;
-import io.github.jclement92.picstagram.PostsAdapter;
+import io.github.jclement92.picstagram.model.Post;
+import io.github.jclement92.picstagram.adapter.PostsAdapter;
 import io.github.jclement92.picstagram.R;
 
 /**
@@ -42,7 +42,6 @@ public class PostsFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -56,7 +55,7 @@ public class PostsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         Toolbar toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
 
         rvPosts = view.findViewById(R.id.rvPosts);
         swipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
