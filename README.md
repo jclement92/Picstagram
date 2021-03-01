@@ -4,7 +4,7 @@
 
 ## Picstagram Part 2
 
-Time spent: **3** hours spent in total
+Time spent: **15** hours spent in total
 
 ### User Stories
 
@@ -71,6 +71,7 @@ Describe any challenges encountered while building the app.
 ### Open-source libraries used
 
 - [Parse SDK](https://github.com/parse-community/Parse-SDK-Android) - The Android SDK for the Parse Platform
+- [Glide](https://github.com/bumptech/glide) - Image loading and caching library for Android
 
 ### License
 
