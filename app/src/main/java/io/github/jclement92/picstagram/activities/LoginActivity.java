@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if(ParseUser.getCurrentUser() != null) {
+        if (ParseUser.getCurrentUser() != null) {
             goMainActivity();
         }
 
@@ -55,14 +55,14 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUser(String username, String password) {
         Log.i(TAG, "Attempting to login user " + username);
         ParseUser.logInInBackground(username, password, (user, e) -> {
-            if(e != null) {
+            if (e != null) {
                 // TODO: Better error handling
                 Log.e(TAG, "Issue with Login", e);
                 Toast.makeText(LoginActivity.this, "Issue with Login!", Toast.LENGTH_SHORT).show();
                 return;
             }
-                goMainActivity();
-                Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
+            goMainActivity();
+            Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
         });
     }
 
