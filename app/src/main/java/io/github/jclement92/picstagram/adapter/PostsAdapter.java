@@ -13,28 +13,27 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.parse.ParseException;
 import com.parse.ParseFile;
-
-import java.util.List;
 
 import io.github.jclement92.picstagram.GlideApp;
 import io.github.jclement92.picstagram.R;
 import io.github.jclement92.picstagram.model.Post;
 
 import static android.graphics.Typeface.BOLD;
+import static io.github.jclement92.picstagram.model.Post.DIFF_CALLBACK;
 
-public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
+public class PostsAdapter extends PagedListAdapter<Post, PostsAdapter.ViewHolder> {
 
     private static final String TAG = "PostsAdapter";
-
     private final Context context;
-    private final List<Post> posts;
 
-    public PostsAdapter(Context context, List<Post> posts) {
+    public PostsAdapter(Context context) {
+        super(DIFF_CALLBACK);
         this.context = context;
-        this.posts = posts;
     }
 
     @NonNull
@@ -46,23 +45,10 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Post post = posts.get(position);
-        holder.bind(post);
-    }
-
-    @Override
-    public int getItemCount() {
-        return posts.size();
-    }
-
-    public void clear() {
-        posts.clear();
-        notifyDataSetChanged();
-    }
-
-    public void addAll(List<Post> post) {
-        posts.addAll(post);
-        notifyDataSetChanged();
+        Post post = getItem(position);
+        if (post != null) {
+            holder.bind(post);
+        }
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -82,7 +68,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
         public void bind(Post post) {
             // Bind the post data into the view elements
-            tvUsername.setText(post.getUser().getUsername());
+            try {
+                tvUsername.setText(post.getUser().fetchIfNeeded().getUsername());
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
 
             SpannableString spannableString = new SpannableString(post.getUser().getUsername());
 
